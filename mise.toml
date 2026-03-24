@@ -1,6 +1,11 @@
 [tools]
 python = "3.13"
 uv = "latest"
+ty = "latest"
+ruff = "latest"
+prek = "latest"
+gitleaks = "latest"
+shellcheck = "latest"
 
 [settings]
 experimental = true
@@ -11,4 +16,16 @@ idiomatic_version_file_enable_tools = ["python"]
 enter = "bash ./scripts/enter_project.sh"
 
 [env]
+_.file = '.env'       # for sensitive data
 UV_LINK_MODE = "copy"
+
+[shell_alias]
+pya = "source ./.venv/bin/activate"
+
+[tasks.docs]
+run = "zensical serve"
+description = "Serve the documentation locally"
+
+[tasks.test]
+run = "pytest --cov-report=term-missing --cov-fail-under=75"
+description = "Run fast tests with coverage report for all packages (fails under 75%)"
