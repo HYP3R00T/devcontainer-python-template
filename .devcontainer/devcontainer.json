@@ -21,7 +21,8 @@
         "hverlin.mise-vscode",
         "EditorConfig.EditorConfig",
         "timonwong.shellcheck",
-        "DavidAnson.vscode-markdownlint"
+        "DavidAnson.vscode-markdownlint",
+        "github.vscode-github-actions"
       ]
     }
   }
