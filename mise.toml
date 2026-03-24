@@ -28,5 +28,5 @@ run = "zensical serve"
 description = "Serve the documentation locally"
 
 [tasks.test]
-run = "pytest --cov-report=term-missing --cov-fail-under=75"
-description = "Run fast tests with coverage report for all packages (fails under 75%)"
+run = "pytest --cov-report=term-missing --cov-fail-under=80"
+description = "Run fast tests with coverage report for all packages (fails under 80%)"
