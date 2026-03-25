@@ -1,12 +1,12 @@
 # Markdownlint configuration
 default: true
 
-# MD010/no-hard-tabs : Hard tabs
-MD010: false
-
 # MD007/ul-indent - Unordered list indentation
 MD007:
   indent: 4
+
+# MD010/no-hard-tabs : Hard tabs
+MD010: false
 
 # MD013/line-length - Line length
 MD013: false
@@ -21,10 +21,13 @@ MD029:
 
 # MD033/no-inline-html - Inline HTML
 MD033:
-  allowed_elements: [a, pre, br, div, img]
+  allowed_elements: [a, pre, br, div, img, p, h1]
 
 # MD036/no-emphasis-as-heading
 MD036: false
+
+# MD041/first-line-heading/first-line-h1
+MD041: false
 
 # MD046/code-block-style
 MD046: false
