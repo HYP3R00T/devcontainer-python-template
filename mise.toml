@@ -24,7 +24,7 @@ _.python.venv = ".venv"
 pya = "source ./.venv/bin/activate"
 
 [tasks.docs]
-run = "zensical serve"
+run = "zensical serve --dev-addr 0.0.0.0:8000"
 description = "Serve the documentation locally"
 
 [tasks.test]
