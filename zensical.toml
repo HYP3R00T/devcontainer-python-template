@@ -56,13 +56,23 @@ features = [
   "search.highlight",
 ]
 
+# Palette toggle for automatic mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
 [[project.theme.palette]]
 scheme = "default"
+media = "(prefers-color-scheme: light)"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
+# Palette toggle for dark mode
 [[project.theme.palette]]
 scheme = "slate"
+media = "(prefers-color-scheme: dark)"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
@@ -70,7 +80,6 @@ toggle.name = "Switch to light mode"
 logo = "lucide/layout-template"
 next = "lucide/arrow-right"
 previous = "lucide/arrow-left"
-repo = "lucide/github"
 search = "lucide/search"
 top = "lucide/arrow-up"
 edit = "lucide/file-pen-line"
