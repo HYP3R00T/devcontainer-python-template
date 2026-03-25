@@ -10,6 +10,7 @@ nav = [
   { Home = "index.md" },
   { Dev = [
     { Setup = "dev/setup/index.md" },
+    { "Template Setup" = "dev/setup/from-template.md" },
     { Resources = "dev/resources.md" },
     { Contributing = [
       { "Authoring Documentation" = "dev/contributing/authoring-documentation.md" },

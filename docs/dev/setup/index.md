@@ -1,51 +1,36 @@
 # Developer Setup
 
-This page documents setup paths that match the repository as it exists today.
+This page documents the day-to-day development workflow for contributors who are already working in a repository created from this template.
+
+The primary path is **Dev Container-first** for consistent environments across contributors.
 
 ## Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Mise](https://mise.jdx.dev/)
-- [uv](https://docs.astral.sh/uv/)
+- [Docker](https://www.docker.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-## Setup
+## Recommended Setup (Dev Container)
 
-1. Fork the repository.
-2. Create a branch for your work.
-3. Run `mise install`.
-4. Run `uv sync` to install project dependencies.
-5. Activate the virtual environment.
+1. Open the repository folder in VS Code.
+2. Select **Reopen in Container** when prompted.
+3. If no prompt appears, run **Dev Containers: Reopen in Container** from Command Palette.
+4. Wait for container setup to finish.
 
-    === "Linux/MacOS"
-
-        ``` sh
-        source ./.venv/bin/activate
-        ```
-
-    === "Windows"
-
-        ``` sh
-        .venv/Scripts/Activate.ps1
-        ```
+`scripts/setup.sh` runs during container creation, so the environment and dependencies are prepared automatically.
 
 ## Pre-commit Hooks
 
-Install hooks after dependencies are set up:
+Hooks are typically installed by setup automation. If needed, re-install manually:
 
 ```bash
 prek install --hook-type pre-commit --overwrite
 prek install --hook-type commit-msg --overwrite
 ```
 
-This enables automatic checks before each commit for:
-
-- File format validation (JSON, YAML, TOML)
-- Code formatting and linting (Python with Ruff)
-- Commit message format (Conventional Commits)
-- Dependency synchronization (UV lockfiles)
-
 ???+ tip "Warm up hooks"
-    Run `prek run --all-files` immediately after installing the hooks. That preloads each environment and prevents surprises during your next commit.
+    Run `prek run --all-files` after hook installation. This preloads environments and avoids first-commit surprises.
 
 ## Daily Commands
 
@@ -59,10 +44,16 @@ uv run pytest --cov --cov-report=term-missing --cov-fail-under=80
 uv run zensical build --clean
 ```
 
-In this template, `scripts/enter_project.sh` can also install `cz` and hooks automatically when `mise` shell hooks run.
+## Optional: Local Setup Without Dev Container
+
+If you are not using Dev Containers, use the fallback local setup path in [Create a New Repository from This Template](from-template.md).
+
+For local tooling details, see [Resources](../resources.md).
 
 ## Related
 
+- [Create a New Repository from This Template](from-template.md)
+- [Resources](../resources.md)
 - [Authoring Documentation](../contributing/authoring-documentation.md)
 - [Naming Conventions](../contributing/naming-conventions.md)
 - [Documentation Principles](../contributing/documentation-principles/index.md)
