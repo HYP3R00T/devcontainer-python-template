@@ -1,8 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
-  "python.languageServer": "None",
-  "ruff.nativeServer": true,
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
@@ -15,10 +13,13 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.quickSuggestions": {
-      "strings": true,
+      "comments": false,
       "other": true,
-      "comments": false
+      "strings": true
     }
   },
-  "markdownlint.configFile": ".markdownlint.yaml"
+  "chat.useAgentsMdFile": true,
+  "markdownlint.configFile": ".markdownlint.yaml",
+  "python.languageServer": "None",
+  "ruff.nativeServer": true
 }
