@@ -1,6 +1,7 @@
 [global]
 flavor = "standard"
 disable = [
+  "MD007", # use 4 spaces instead of 2
   "MD013", # Line length
   "MD033", # No inline HTML
   "MD034", # No bare URLs
