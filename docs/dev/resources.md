@@ -126,6 +126,10 @@ Catches errors, style violations, and type inconsistencies without running the c
   Static analysis for shell scripts.
     - [www.shellcheck.net](https://www.shellcheck.net)
 
+- **Rumdl (Markdown linting):**
+  Markdown linting and style checks.
+    - [rumdl.dev](https://rumdl.dev/)
+
 ### Testing
 
 Validates that the system behaves as expected at runtime.
