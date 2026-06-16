@@ -23,7 +23,7 @@ UV_LINK_MODE = "copy"
 pya = "source ./.venv/bin/activate"
 
 [tasks.docs]
-run = "zensical serve --dev-addr 0.0.0.0:8000"
+run = "uvx zensical serve"
 description = "Serve the documentation locally"
 
 [tasks.test]
