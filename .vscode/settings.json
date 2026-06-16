@@ -1,11 +1,19 @@
 {
+  "explorer.excludeGitIgnore": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "[markdown]": {
     "editor.defaultFormatter": "rvben.rumdl"
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.rulers": [
+      120
+    ]
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
