@@ -37,7 +37,7 @@ code .
 
 1. When prompted, select **Reopen in Container**.
 2. If no prompt appears, run the command palette action:
-    **Dev Containers: Reopen in Container**.
+   **Dev Containers: Reopen in Container**.
 3. Wait for container setup to complete.
 
 The dev container runs project setup automatically and provides a consistent toolchain.
