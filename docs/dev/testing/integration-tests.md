@@ -34,6 +34,7 @@ document them in `tests/conftest.py` and [Optional Test Markers](optional-marker
 ```python
 # tests/integration/test_cli_flow.py
 
+
 @pytest.fixture(scope="module")
 def sample_project(tmp_path_factory):
     root = tmp_path_factory.mktemp("project")

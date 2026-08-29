@@ -90,8 +90,8 @@ _SRGB_LINEAR_SCALE = 12.92
 
 ```python
 _SRGB_LINEAR_SCALE = 12.92  # inline comment
-LINEAR_SCALE = 12.92        # missing private prefix for module-internal constants
-scale = 12.92               # wrong case, not descriptive
+LINEAR_SCALE = 12.92  # missing private prefix for module-internal constants
+scale = 12.92  # wrong case, not descriptive
 ```
 
 ## Variables

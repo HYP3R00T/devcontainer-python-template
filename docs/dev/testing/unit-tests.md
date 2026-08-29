@@ -48,6 +48,7 @@ Create minimal, synthetic inputs instead of loading large fixtures.
 def parse_int(value: str) -> int:
     return int(value.strip())
 
+
 def test_parse_int_trims_whitespace() -> None:
     assert parse_int(" 42 ") == 42
 ```

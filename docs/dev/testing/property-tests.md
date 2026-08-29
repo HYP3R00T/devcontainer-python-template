@@ -45,10 +45,11 @@ from hypothesis import given
 from hypothesis import strategies as st
 from project.math_utils import clamp_unit_interval
 
+
 @given(st.floats(min_value=-1e6, max_value=1e6, allow_nan=False, allow_infinity=False))
 def test_clamped_to_unit_interval(value: float) -> None:
-  result = clamp_unit_interval(value)
-  assert 0.0 <= result <= 1.0
+    result = clamp_unit_interval(value)
+    assert 0.0 <= result <= 1.0
 ```
 
 ### Shape preservation
@@ -58,9 +59,9 @@ Applying a normalizer twice should produce the same output as once.
 ```python
 @given(st.floats(min_value=-1000, max_value=1000, allow_nan=False, allow_infinity=False))
 def test_normalizer_is_idempotent(value: float) -> None:
-  once = clamp_unit_interval(value)
-  twice = clamp_unit_interval(once)
-  assert once == twice
+    once = clamp_unit_interval(value)
+    twice = clamp_unit_interval(once)
+    assert once == twice
 ```
 
 ### Monotonicity
@@ -69,12 +70,12 @@ A larger input must not produce a smaller clamped output.
 
 ```python
 @given(
-  st.floats(min_value=-1000, max_value=1000, allow_nan=False, allow_infinity=False),
-  st.floats(min_value=-1000, max_value=1000, allow_nan=False, allow_infinity=False),
+    st.floats(min_value=-1000, max_value=1000, allow_nan=False, allow_infinity=False),
+    st.floats(min_value=-1000, max_value=1000, allow_nan=False, allow_infinity=False),
 )
 def test_monotone(a: float, b: float) -> None:
-  x, y = sorted((a, b))
-  assert clamp_unit_interval(x) <= clamp_unit_interval(y)
+    x, y = sorted((a, b))
+    assert clamp_unit_interval(x) <= clamp_unit_interval(y)
 ```
 
 ## File Layout
@@ -95,6 +96,7 @@ Hypothesis prints a summary when it finds a failing example. This is useful loca
 
 ```python
 from hypothesis import settings
+
 settings.register_profile("ci", max_examples=50)
 settings.load_profile("ci")
 ```
